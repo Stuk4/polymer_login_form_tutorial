@@ -1,0 +1,6 @@
+{
+  "name": "form_login_tutorial",
+  "short_name": "form_login_tutorial",
+  "start_url": "/",
+  "display": "standalone"
+}

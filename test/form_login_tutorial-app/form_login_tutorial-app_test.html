@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>form_login_tutorial-app test</title>
+
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../../src/form_login_tutorial-app/form_login_tutorial-app.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <form_login_tutorial-app></form_login_tutorial-app>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('form_login_tutorial-app', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'form_login_tutorial-app');
+        });
+      });
+    </script>
+  </body>
+</html>
