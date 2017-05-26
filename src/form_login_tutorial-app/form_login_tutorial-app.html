@@ -48,7 +48,7 @@
       </div>
       <form is="iron-form" id="form">
         <div class="card-content">
-          <paper-input label="Email" required type="email"> </paper-input>
+          <paper-input label="Email" value="{{email}}" required type="email"> </paper-input>
           <paper-input label="Contrasenia" required type="password"></paper-input>
         </div>
         <div class="card-actions">
@@ -63,10 +63,21 @@
   <script>
     Polymer({
       is: 'form_login_tutorial-app',
+      properties:{
+        email:{
+          type:"String",
+          observer:"_emailChanged"
+
+        }
+      },
       ready: function(){
         this.$.login.addEventListener("click", ()=>{
           this.$.form.submit()
         })
+      },
+      _emailChanged: function(newv, oldv){
+        console.log("nuevo "+newv)
+        console.log("antes "+oldv)
       }
     });
   </script>
