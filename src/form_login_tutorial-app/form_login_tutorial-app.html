@@ -5,6 +5,7 @@
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../../bower_components/iron-form/iron-form.html">
+<link rel="import" href="./hidden-behaviour.html">
 
 <dom-module id="form_login_tutorial-app">
   <template>
@@ -69,7 +70,8 @@
           observer:"_emailChanged"
 
         }
-      },
+      },      
+      behaviors: [FormApp.Hidding],
       ready: function(){
         this.$.login.addEventListener("click", ()=>{
           this.$.form.submit()
