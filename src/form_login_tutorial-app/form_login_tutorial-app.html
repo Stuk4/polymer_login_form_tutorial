@@ -6,13 +6,20 @@
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../../bower_components/iron-form/iron-form.html">
 <link rel="import" href="./hidden-behaviour.html">
+<link rel="import" href="./formbutton.html">
 
 <dom-module id="form_login_tutorial-app">
   <template>
     <style>
       :host {
         display: block;
-        text-align: center
+        text-align: center;
+        --form-button-theme: {
+          background-color : red;
+          color :white;
+          border: none;
+          border-radius: 5px
+        }
       }
       paper-card{
         width: 400px;
@@ -53,8 +60,7 @@
           <paper-input label="Contrasenia" required type="password"></paper-input>
         </div>
         <div class="card-actions">
-          <paper-button raised id="login">Enviar</paper-button>
-          <paper-button>Cancelar</paper-button>
+          <form-button></form-button>
         </div>
       </form>
     </paper-card>
@@ -73,9 +79,9 @@
       },      
       behaviors: [FormApp.Hidding],
       ready: function(){
-        this.$.login.addEventListener("click", ()=>{
+        /*this.$.login.addEventListener("click", ()=>{
           this.$.form.submit()
-        })
+        })*/
       },
       _emailChanged: function(newv, oldv){
         console.log("nuevo "+newv)
