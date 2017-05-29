@@ -7,10 +7,11 @@
 <link rel="import" href="../../bower_components/iron-form/iron-form.html">
 <link rel="import" href="./hidden-behaviour.html">
 <link rel="import" href="./formbutton.html">
+<link rel="import" href="./my-styles.html">
 
 <dom-module id="form_login_tutorial-app">
   <template>
-    <style>
+    <style include=>
       :host {
         display: block;
         text-align: center;
@@ -54,7 +55,7 @@
         <iron-icon icon="account-circle"></iron-icon>
         Crear Cuenta
       </div>
-      <form is="iron-form" id="form">
+      <form is="iron-form" id="form" class="indigo">
         <div class="card-content">
           <paper-input label="Email" value="{{email}}" required type="email"> </paper-input>
           <paper-input label="Contrasenia" required type="password"></paper-input>
